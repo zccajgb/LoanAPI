@@ -1,6 +1,6 @@
 # Loan API
 
-Simple website and API for CRUD.
+Simple website and API for CRUD, written in C# and Typescript
 
 ### Website
 
