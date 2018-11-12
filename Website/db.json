@@ -1,0 +1,22 @@
+{
+    "loans":[
+        {
+            "id":1,
+            "BorrowerName":"Joe",
+            "repaymentAmount":1.11,
+            "FundingAmount":1.11
+        },
+        {
+            "id":2,
+            "BorrowerName":"Jack",
+            "repaymentAmount":2.12,
+            "FundingAmount":2.22
+        },
+        {
+            "id":1,
+            "BorrowerName":"Jess",
+            "repaymentAmount":3.33,
+            "FundingAmount":4.50
+        }
+    ]
+}

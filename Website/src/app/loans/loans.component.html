@@ -1,0 +1,27 @@
+ <div>
+ <label> Add Loan:</label>
+    <a routerLink="/add">
+      <button>add</button>
+    </a>
+  </div>
+
+  <label> Get Loan by ID: 
+    <input [(ngModel)]="id" placeholder="ID">
+  </label>
+  <a routerLink="/detail/{{id}}">
+  <button>Go</button>
+  </a> 
+<h3>List of Loans</h3>
+<ul class="loans">
+  <table>
+  <tr>
+    <th>ID</th><th>Borrower Name</th><th>Repayment Amount</th><th>Funding Amount</th>
+  </tr>
+  <tr *ngFor="let loan of loans" routerLink="/detail/{{loan.id}}">
+    <!--<a routerLink="/detail/{{loan.id}}">-->
+      <td>{{loan.id}}</td> <td>{{loan.borrowerName}} </td><td>{{loan.repaymentAmount | currency : "£"}}</td><td>{{loan.fundingAmount | currency : "£"}}</td>
+    
+  </tr> 
+</table>
+</ul>
+

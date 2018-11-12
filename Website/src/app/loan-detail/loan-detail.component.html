@@ -1,0 +1,30 @@
+<div *ngIf="loan">
+
+  
+  <h2>Details of Loan {{loan.id}}</h2>
+  <div><label>id: {{loan.id}}</label></div>
+  <div>
+    <label>Borrower Name:
+      <input [(ngModel)]="loan.borrowerName" placeholder="borrowerName">
+    </label>
+  </div>
+  <div>
+    <label>Funding Amount: 
+      <input [(ngModel)]="loan.fundingAmount" placeholder="0.00">
+    </label>
+  </div>
+  <div>
+    <label>Repayment Amount: 
+        <input [(ngModel)]="loan.repaymentAmount" placeholder="0.00">
+    </label>
+  </div>
+  <button (click)="save()">save</button>
+  <button (click)="goBack()">go back</button>
+</div>
+<div>
+<button (click)="delete()">delete</button>
+</div>
+
+  
+  
+  

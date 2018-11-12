@@ -1,0 +1,37 @@
+<h3>Add Loan</h3>
+
+<div class="row custom-row">
+    <div class="col-sm-5 custom-container jumbotron">
+      
+      <form novalidate (ngSubmit)="addLoan()" class="form-horizontal" #signupForm="ngForm">
+
+          
+    
+            <!-- Borrower Name--->
+            <div class="form-group">
+              <label for="BorrowerName"> Borrower Name </label>
+              <input type="text" [(ngModel)]="loan.borrowerName" name="borrowerName" placeholder="Name" required #name="ngModel">
+            </div>
+            
+            <!-- Repayment Amount-->
+            <div class="form group">
+              <label for="repaymentAmount"> Repayment Amount (£) </label>
+              <input type="number" min="0.01" step="0.01" [(ngModel)]="loan.repaymentAmount" placeholder=100.00 name="repaymentAmount" required>
+            </div>
+            
+            <!-- Funding Amount-->
+            <div class="form-group">
+              <label for="FundingAmount"> Funding Amount (£) </label>
+              <input type="number" min="0.01" step="0.01" [(ngModel)]="loan.FundingAmount" placeholder=100.00 name="FundingAmount" required>
+            </div>
+            
+            <!-- Buttons-->
+            <div class="form-group">
+              <button type="reset" class="btn btn-default" (click)="goBack()">Cancel</button>
+              <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid" (click)="addLoan">Add</button>
+            </div>
+
+      </form>
+    </div>
+  </div>
+  
